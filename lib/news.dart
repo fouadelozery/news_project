@@ -23,7 +23,10 @@ class News extends StatelessWidget {
                     SizedBox(
                       height: 15,
                     ),
-                    Expanded(child: Newslistview())
+                    Expanded(
+                        child: Newslistview(
+                      catogry: "general",
+                    ))
                   ],
                 ))));
   }

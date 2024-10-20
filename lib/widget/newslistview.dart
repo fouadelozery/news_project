@@ -7,8 +7,9 @@ import 'package:flutter_application_2/services/newsservices.dart';
 class Newslistview extends StatefulWidget {
   const Newslistview({
     super.key,
+    required this.catogry,
   });
-
+  final String catogry;
   @override
   State<Newslistview> createState() => _NewslistviewState();
 }
@@ -23,7 +24,7 @@ class _NewslistviewState extends State<Newslistview> {
   }
 
   Future<void> getgeneralnew() async {
-    articles = await Newsservices(Dio()).getnews();
+    articles = await Newsservices(Dio()).getnews(catogry: widget.catogry);
     isloading = false;
     setState(() {});
   }

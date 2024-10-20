@@ -4,7 +4,6 @@ import 'package:flutter_application_2/news.dart';
 import 'package:flutter_application_2/services/newsservices.dart';
 
 void main() {
-  Newsservices(Dio()).getnews();
   runApp(const News());
 }
 
